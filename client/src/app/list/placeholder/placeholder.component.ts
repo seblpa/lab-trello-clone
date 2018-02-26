@@ -1,28 +1,15 @@
-import { EventEmitter } from '@angular/forms/src/facade/async';
-import { Component, OnInit, Input, Output, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'trello-placeholder',
+  selector: 'app-placeholder',
   templateUrl: './placeholder.component.html',
   styleUrls: ['./placeholder.component.scss']
 })
-export class PlaceholderComponent {
-
-  @Input() placeholder: string;
-  @Output() onSave = new EventEmitter<string>();
-
-  isEditing = false;
-  title: string;
+export class PlaceholderComponent implements OnInit {
 
   constructor() { }
 
-  toggleEdit() {
-    this.isEditing = !this.isEditing;
+  ngOnInit() {
   }
 
-  save() {
-    this.onSave.emit(this.title);
-    this.title = '';
-    this.isEditing = false;
-  }
 }

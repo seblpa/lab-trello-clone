@@ -1,13 +1,13 @@
-import { SortableItem } from './../shared/interfaces';
-import { List } from './../list/list.model';
+import { SortableItem } from "../shared/intefaces/sortable-item.interface";
 
-// Lesson 3: Implement the Card model
-export class Card {
-    constructor(rawObj) {
+export class Card implements SortableItem {
 
-    }
+  description:String
+  dueDate:Date
+  list:String
+  created_at:Date
+  updated_at:Date
+  constructor({})
 
-    setList(id) {
 
-    }
 }
